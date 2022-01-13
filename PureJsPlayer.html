@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    
+</head>
+
+<body>
+    <iframe id="frame" style="position:absolute;height:calc(100vh - 10px);width:100vh;border:none;display:none;"></iframe>
+    <div id="inputDiv">
+        <input id="myText" type="text" size="50" required>
+        <button type="button" onclick="myFunction()">Load</button>
+    </div>
+    <script>
+        function myFunction() {
+            var source = document.getElementById("myText").value;
+            document.getElementById('frame').src = source;
+            document.getElementById("inputDiv").style.display = "none";
+            document.getElementById("frame").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
